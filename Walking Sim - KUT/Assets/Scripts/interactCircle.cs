@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class interactCircle : MonoBehaviour
 {
+    
 
 public gameManager managerRef;
 public GameObject interactButton;
