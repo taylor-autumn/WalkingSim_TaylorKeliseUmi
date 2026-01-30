@@ -1,4 +1,8 @@
+using JetBrains.Annotations;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class interactCircle : MonoBehaviour
 {
@@ -22,17 +26,22 @@ public GameObject interactButton;
         
     }
 
-    private void onTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-    if (other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
+            print("in circle");
             interactButton.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        interactButton.SetActive(false);
+        if (other.CompareTag("Player"))
+        {
+            print("left circle");
+            interactButton.SetActive(false);
+        }
     }
 
 
