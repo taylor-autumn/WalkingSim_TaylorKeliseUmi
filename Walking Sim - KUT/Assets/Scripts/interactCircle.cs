@@ -3,15 +3,7 @@ using UnityEngine;
 
 public class interactCircle : MonoBehaviour
 {
-    [Header("References")]
-    public gameManager managerRef;
-    public GameObject interactButton;
-    public TMP_Text interactText;
-    unitInfo charUnit;
-
-    private bool canPush = true;
-    private Animator interactAnimator;
-
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    private void Awake()
