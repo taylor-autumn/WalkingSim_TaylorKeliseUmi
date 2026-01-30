@@ -3,17 +3,21 @@ using UnityEngine;
 
 public class interactCircle : MonoBehaviour
 {
-    
+    public GameObject interactButton;
+    public gameManager managerRef;
+    private bool canPush = true;
+    public TMP_Text interactText;
+    unitInfo charUnit;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-   private void Awake()
+    private void Awake()
     {
         interactButton.SetActive(false);
         getInformation();
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -36,7 +40,7 @@ public class interactCircle : MonoBehaviour
 
     public void getInformation()
     {
-        charUnit=gameObject.GetComponentInParent<unitInfo>();
+        charUnit = gameObject.GetComponentInParent<unitInfo>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,7 +60,7 @@ public class interactCircle : MonoBehaviour
         {
             interactButton.SetActive(false);
             canPush = false;
-            print("Bye " +  charUnit.name + "!");
+            print("Bye " + charUnit.name + "!");
         }
     }
 
