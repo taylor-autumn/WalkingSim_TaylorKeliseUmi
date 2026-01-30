@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class movementScript : MonoBehaviour
 {
+    public gameManager managerRef;
 
     [Header("Player Movement")]
     public float moveSpeed = 5.0f;
@@ -34,6 +35,18 @@ public class movementScript : MonoBehaviour
 
     void Update()
     {
+        //this also means you cant move the camera, decide later if we want it that way or not
+
+        if (managerRef.state == gameState.normalMode)
+        {
+            canMove = true;
+        }
+        else
+        {
+            canMove = false;
+        }
+
+
         if (canMove)
         {
 

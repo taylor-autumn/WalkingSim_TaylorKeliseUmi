@@ -1,18 +1,23 @@
-using JetBrains.Annotations;
-using Microsoft.Unity.VisualStudio.Editor;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class interactCircle : MonoBehaviour
 {
+    [Header("References")]
+    public gameManager managerRef;
+    public GameObject interactButton;
+    public TMP_Text interactText;
+    unitInfo charUnit;
 
-public gameManager managerRef;
-public GameObject interactButton;
+    private bool canPush = true;
+    private Animator interactAnimator;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    private void Awake()
     {
         interactButton.SetActive(false);
+        getInformation();
     }
     void Start()
     {
@@ -22,15 +27,34 @@ public GameObject interactButton;
     // Update is called once per frame
     void Update()
     {
-        
+        if (canPush && Input.GetKeyDown(KeyCode.E))
+        {
+            managerRef.state = gameState.interactMode;
+            print("In interacting");
+            canPush = false;
+            Animator interactAnimator = interactButton.GetComponentInChildren<Animator>();
+            interactAnimator.SetTrigger("push");
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && managerRef.state == gameState.interactMode)
+        {
+            canPush = true;
+            managerRef.state = gameState.normalMode;
+        }
+    }
+
+    public void getInformation()
+    {
+        charUnit=gameObject.GetComponentInParent<unitInfo>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            print("in circle");
             interactButton.SetActive(true);
+            canPush = true;
+            interactText.text = "Interact (E) with " + charUnit.name;
+            print(charUnit.firstLines[0]);
         }
     }
 
@@ -38,8 +62,9 @@ public GameObject interactButton;
     {
         if (other.CompareTag("Player"))
         {
-            print("left circle");
             interactButton.SetActive(false);
+            canPush = false;
+            print("Bye " +  charUnit.name + "!");
         }
     }
 

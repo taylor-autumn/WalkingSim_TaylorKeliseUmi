@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 71699682}
   - component: {fileID: 71699681}
   - component: {fileID: 71699680}
+  - component: {fileID: 71699684}
   m_Layer: 0
   m_Name: Umi
   m_TagString: Untagged
@@ -227,14 +228,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 71699679}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.11, y: 0.65, z: 12.51}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.18999958, y: 0, z: 20.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 287826184}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1608562833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &71699684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71699679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Umi
+  firstLines:
+  - Im hungry. Im usually hungry.
+  secondLines:
+  - Oh shit.
+  thirdLines:
+  - "Wait\u2026 whats going on?"
 --- !u!1001 &126154226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -292,9 +312,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143596720}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 1013692175}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactButton
       value: 
-      objectReference: {fileID: 1178705693}
+      objectReference: {fileID: 2085525367}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -357,9 +381,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143596720}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 1013692175}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactButton
       value: 
-      objectReference: {fileID: 1178705693}
+      objectReference: {fileID: 2085525367}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -422,9 +450,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143596720}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 1013692175}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactButton
       value: 
-      objectReference: {fileID: 1178705693}
+      objectReference: {fileID: 2085525367}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -487,9 +519,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143596720}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 1013692175}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactButton
       value: 
-      objectReference: {fileID: 1178705693}
+      objectReference: {fileID: 2085525367}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -770,6 +806,7 @@ GameObject:
   - component: {fileID: 537514062}
   - component: {fileID: 537514061}
   - component: {fileID: 537514060}
+  - component: {fileID: 537514064}
   m_Layer: 0
   m_Name: Taylor
   m_TagString: Untagged
@@ -861,14 +898,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537514059}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.92, y: 0.65, z: -7.76}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1039302898}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1608562833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &537514064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537514059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Taylor
+  firstLines:
+  - Hey broski, welcome to class, how u doin (with heavy LA accent)
+  secondLines:
+  - Oh my gowd this is LITERALLY not happening right nyow-ah
+  thirdLines:
+  - Dude. we gotta get outta here NEOW!
 --- !u!1 &689920757
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,6 +937,7 @@ GameObject:
   - component: {fileID: 689920760}
   - component: {fileID: 689920759}
   - component: {fileID: 689920758}
+  - component: {fileID: 689920762}
   m_Layer: 0
   m_Name: Kelise
   m_TagString: Untagged
@@ -972,14 +1029,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689920757}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.83, y: 0.65, z: -12.23}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.91, y: 0, z: -4.4699993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4432432}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1608562833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &689920762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689920757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Kelise
+  firstLines:
+  - I LOVEEE HATSUNE MIKU.
+  - MIKU MIKU MIKUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU!
+  secondLines:
+  - Dude I cant die, I gotta go to Miku Expo later.
+  thirdLines:
+  - 'Oh **** oh ****oh **** oh **** oh **** oh **** OH ****! '
 --- !u!1001 &767972122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1037,9 +1114,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143596720}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 1013692175}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactButton
       value: 
-      objectReference: {fileID: 1178705693}
+      objectReference: {fileID: 2085525367}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1094,6 +1175,142 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1013692173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1013692174}
+  - component: {fileID: 1013692176}
+  - component: {fileID: 1013692175}
+  m_Layer: 5
+  m_Name: interactText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1013692174
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013692173}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2085525368}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.8872, y: -7.869034}
+  m_SizeDelta: {x: 262.2255, y: 31.7381}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1013692175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013692173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Interact (E) with _____
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: c448975fff0d0da43b327a420d73c17d, type: 2}
+  m_sharedMaterial: {fileID: 5725730264943598543, guid: c448975fff0d0da43b327a420d73c17d, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 17.8
+  m_fontSizeBase: 17.8
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 4096
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1013692176
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013692173}
+  m_CullTransparentMesh: 1
 --- !u!4 &1039302898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
@@ -1156,9 +1373,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143596720}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 1013692175}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactButton
       value: 
-      objectReference: {fileID: 1178705693}
+      objectReference: {fileID: 2085525367}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1284,6 +1505,7 @@ GameObject:
   - component: {fileID: 1111279911}
   - component: {fileID: 1111279910}
   - component: {fileID: 1111279909}
+  - component: {fileID: 1111279913}
   m_Layer: 0
   m_Name: Cathy
   m_TagString: Untagged
@@ -1375,14 +1597,95 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111279908}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.83, y: 0.65, z: 13.05}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.91, y: 0, z: 20.810001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1609779607}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1608562833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1111279913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111279908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Cathy
+  firstLines:
+  - OMG hi ym name is Cathy I love Yaoi. I draw Yaoi. I live for Yaoi. Here is a
+    poem I wrote about Yaoi. Here it goes. Ahem.
+  - "Oh yaoi\u2014 you beautiful, dramatic, slow-burn catastrophe, you genre of almost,
+    of glances held a fraction too long and hands that hover like they\u2019re afraid
+    of changing the universe. "
+  - 'I love you in the way one loves rain when it ruins plans but makes everything
+    feel cinematic. I love you in the way of unread messages, three dots blinking,
+    tension stretched so tight it hums. '
+  - 'I love you in the way one loves rain when it ruins plans but makes everything
+    feel cinematic. I love you in the way of unread messages, three dots blinking,
+    tension stretched so tight it hums. '
+  - "I love you for the men\u2014 grown men, tragically grown, with emotional repression
+    stacked like unpaid bills, who stare at each other like if I say this out loud
+    I might die, but if I don\u2019t I definitely will. "
+  - "I love you for the tropes, oh, the tropes\u2014 the rivals who argue as foreplay
+    (but metaphorically, relax), the coworkers who pretend professionalism while
+    their souls are actively holding hands, the childhood friends who swear they\u2019re
+    \u201Clike brothers\u201D right up until fate clears its throat and says, \u201CBe
+    serious.\u201D "
+  - 'I love you for the yearning. God, the yearning. The kind of yearning that deserves
+    its own tax bracket. The kind where nothing happens for 40 chapters except emotional
+    devastation and somehow that is everything. '
+  - "I love you for the almost-touch: fingers brushing in a crowded room, a jacket
+    placed gently over tired shoulders, a lingering hand on a wrist that says \u201CI
+    noticed you. I always notice you.\u201D "
+  - "I love you for conversations at 2 a.m., under fluorescent lights or soft moon
+    glow, where one character finally cracks and the other doesn\u2019t fix him\u2014
+    just stays. Just stays. "
+  - "I love you for the dramatic misunderstandings that could be solved in one sentence
+    but instead fuel ten chapters of exquisite suffering. Do I scream? Yes. Do I
+    eat it up like it\u2019s a five-course meal? Also yes. "
+  - That's it so far. But it's a work in progress. Come back later and I will have
+    it fully finished tehehehee....
+  secondLines:
+  - YOU'RE BACK! What? Robots trying to kill us? Meh whatever, what's more important
+    is you hear more about my poem right now. Ahem Ahem.
+  - 'Yaoi...I love you for the way love is never casual. It is important. It is life-altering.
+    It is treated like a secret treasure chest buried under trauma, pride, and poorly
+    timed interruptions. '
+  - "I love you for the rain scenes, the hospital scenes, the \u201Csay his name
+    like it\u2019s a prayer\u201D scenes. I love you for the moment one of them realizes\u2014
+    oh no. this isn\u2019t admiration. this is the thing that ruins me. "
+  - "I love you for the rain scenes, the hospital scenes, the \u201Csay his name
+    like it\u2019s a prayer\u201D scenes. I love you for the moment one of them realizes\u2014
+    oh no. this isn\u2019t admiration. this is the thing that ruins me. "
+  - "I love you for the soft endings, the earned confessions, the kiss that doesn\u2019t
+    need description because the entire story has been the buildup. "
+  - "And yes\u2014 I love you obnoxiously. I love you unapologetically. I love you
+    in the way only someone who has whispered \u201CJUST COMMUNICATE\u201D at a screen
+    while smiling like an idiot can. "
+  - Yaoi...damn that's how far I got. Awesome right. What's that? You have to save
+    us from robots. UGHH tsk tsk tsk.
+  - Whatever go finish that I guess. I have to find the perfect ending to this poem
+    anyway.
+  - But once you come back, trust me, you will be BLOWN out of the water. It'll be
+    that good. Trust.
+  thirdLines:
+  - YOU'RE BACK. YESSS. HERE HERE I GOT IT. THE PERFECT ENDING. LISTEN!
+  - 'Yaoi, you are poetry written in longing, romance stretched thin and glowing,
+    two men choosing each other again and again in a world that made it hard. '
+  - "And I will read you, over and over, dramatic sigh by dramatic sigh, until the
+    slow burn finally ignites\u2014 and somehow, impossibly, it was worth every second. "
+  - In short, Thank you Yaoi. For everything. I love gay men.
+  - So what did you think???!?!?! Amazing right. My best work honestly.
+  - What? Saving us? Oh right. Sure Sure go do that. My Yaoi comic deadline is soon
+    I needa get on that.
+  - It was awesome though right...
 --- !u!1 &1159988663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,13 +1816,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159988663}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.62, y: 0.77, z: 8.56}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.54, y: 0.120000005, z: 16.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1890307963}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1608562833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1159988670
 MonoBehaviour:
@@ -1653,16 +1956,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178705693}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44955835, y: 0.44955835, z: 0.44955835}
+  m_LocalScale: {x: 0.54891074, y: 0.54891074, z: 0.54891074}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2004430928}
+  m_Father: {fileID: 2085525368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 172}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 574, y: 147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1178705695
@@ -1685,7 +1988,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6e3a7b8e39c0b2c4c9778c975073bf25, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d07912958583c24469197de6e4cfe8db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1720,6 +2023,7 @@ GameObject:
   - component: {fileID: 1480296266}
   - component: {fileID: 1480296265}
   - component: {fileID: 1480296264}
+  - component: {fileID: 1480296268}
   m_Layer: 0
   m_Name: Christine
   m_TagString: Untagged
@@ -1811,12 +2115,72 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480296263}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.02, y: 0.65, z: -14.32}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20.94, y: 0, z: -6.5599995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1199194586}
+  m_Father: {fileID: 1608562833}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1480296268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480296263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Christine
+  firstLines:
+  - Anyway that's why Tracer is the best to main.
+  - Oh right. I'm teaching.
+  - Good Morning. Make sure to Interact with everyone and then take a seat to start
+    class!
+  secondLines:
+  - "NO!...My loans\u2026What if I still have to pay them."
+  thirdLines:
+  - '*texts mom love u*'
+--- !u!1 &1608562832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608562833}
+  m_Layer: 0
+  m_Name: characters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1608562833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608562832}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.92, y: 0.65, z: -7.76}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1159988669}
+  - {fileID: 1801946695}
+  - {fileID: 1111279912}
+  - {fileID: 71699683}
+  - {fileID: 689920761}
+  - {fileID: 1480296267}
+  - {fileID: 537514063}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1609779607 stripped
@@ -1836,6 +2200,7 @@ GameObject:
   - component: {fileID: 1801946694}
   - component: {fileID: 1801946693}
   - component: {fileID: 1801946692}
+  - component: {fileID: 1801946696}
   m_Layer: 0
   m_Name: Leah
   m_TagString: Untagged
@@ -1927,14 +2292,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801946691}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.01, y: 0.65, z: -4.82}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.93, y: 0, z: 2.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1172733426}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1608562833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801946696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801946691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Leah
+  firstLines:
+  - OMG OILYYYYY OILY IS MY FAVORITE ADJECTIVE HOW MANY TIMES CAN I SAY OILY IN ONE
+    BREATH LETS TRY
+  - OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY oILy OILy
+    oILy OILy oILY oiLY OILy oil- oily- *GASP*
+  - Yeah that's it for now fam.
+  secondLines:
+  - OMG I CAN'T BELIEVE THIS IS HAPPENING WHAT DO I DO.
+  - IF I DIE THEN I WON'T SEE MY DOG AGAIN. OR OILY MEN. OMG I HADN'T EVEN THOUGHT
+    OF THE OILY MEN. WHAT WILL THEY DO WITHOUT ME?!??
+  - NOOOOOOOOOOOOO! OILY MEN!!!!!!!!!!!!
+  thirdLines:
+  - I can't believe I'm dying here....
+  - Tell the oily men, I love them, I cherish them, I value them, and they were the
+    reason I breathed every day...
+  - FML I guess.
 --- !u!4 &1890307963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
@@ -1955,7 +2349,7 @@ GameObject:
   - component: {fileID: 1983880220}
   - component: {fileID: 1983880219}
   m_Layer: 0
-  m_Name: player
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1973,6 +2367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797acbac71a648d4587cd1c3c13923e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  managerRef: {fileID: 2143596720}
   moveSpeed: 5
   jumpForce: 8
   gravity: 20
@@ -2173,7 +2568,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2190,7 +2585,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1178705694}
+  - {fileID: 2085525368}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2198,6 +2593,66 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &2085525367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085525368}
+  - component: {fileID: 2085525369}
+  m_Layer: 5
+  m_Name: interactBoxUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2085525368
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085525367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1178705694}
+  - {fileID: 1013692174}
+  m_Father: {fileID: 2004430928}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3, y: 172}
+  m_SizeDelta: {x: 315.07477, y: 80.68988}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &2085525369
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085525367}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9e090aa2f989e71409639a820aaf1033, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2143596719
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,9 +2832,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143596720}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 1013692175}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactButton
       value: 
-      objectReference: {fileID: 1178705693}
+      objectReference: {fileID: 2085525367}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2395,11 +2854,5 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1102613711}
   - {fileID: 1983880224}
-  - {fileID: 1159988669}
-  - {fileID: 1801946695}
-  - {fileID: 1111279912}
-  - {fileID: 71699683}
-  - {fileID: 689920761}
-  - {fileID: 1480296267}
-  - {fileID: 537514063}
+  - {fileID: 1608562833}
   - {fileID: 2143596724}
