@@ -248,13 +248,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Umi
+  charName: Umi
   firstLines:
   - Im hungry. Im usually hungry.
   secondLines:
-  - Oh shit.
+  - Is it lunch time yet?
   thirdLines:
-  - "Wait\u2026 whats going on?"
+  - Finally. Food.
+  fourthLines:
+  - '*SCREAMS EVERY TIME HE GETS A KO*'
+  fifthLines:
+  - '*making music with Kelise*'
+  - This sounds like Shit. This is so good.
+  sixthLines:
+  - '*plays Street fighter*'
+  - Nerf Ryu.
 --- !u!1001 &126154226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.96
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.z
@@ -308,9 +316,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1204175419}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 256407357}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1838358378}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactText
       value: 
@@ -342,7 +362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.96
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.z
@@ -377,9 +397,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1204175419}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 256407357}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1838358378}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactText
       value: 
@@ -442,17 +474,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Michelle
-  firstLines:
-  - Ayo friend, sorry I didn't bring my maple syrup today, eh, my meese ate in me
-    back yard...
-  - Eh, tomorrow i'll bring my bag and maple leaf eh. Niagara falls, niagara falls...
+  charName: Michelle
+  firstLines: []
   secondLines:
-  - Oh brodi tis is bad on my fam yo!
-  - What if I never see my meese again...
+  - I MADE IT. I MADE IT. BRO I OVERSLEPT AND I HAD TO SHIT SO BAD THAT I WAS LATE.
+  - "I SWEAR. CHRISTINE PLS DON\u2019T MARK ME LATE PLS DON\u2019T MARK ME LATE."
   thirdLines:
-  - Eh I guess it do be my time eh?
-  - Aboot toime eh.
+  - FINALLYYYY class is over and I can play games omg I love games.
+  fourthLines:
+  - "Shh shhhhh I can\u2019t be bothered right now."
+  - "I\u2019m locked in to How I met your Mother and I cannot have any distractions."
+  fifthLines:
+  - What? I was craving a late night snack okay.
+  - No judgment welcomed here.
+  sixthLines:
+  - '*pants while pacing*'
+  - '*pants while pacing*'
+  - '*pants while pacing*'
+  - "I can\u2019t sleep bro I\u2019m just gonna keep movin. "
+  - '*pants while pacing*'
 --- !u!143 &178510509
 CharacterController:
   m_ObjectHideFlags: 0
@@ -603,17 +643,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Fai
+  charName: Fai
   firstLines:
-  - Ayo friend, sorry I didn't bring my maple syrup today, eh, my meese ate in me
-    back yard...
-  - Eh, tomorrow i'll bring my bag and maple leaf eh. Niagara falls, niagara falls...
+  - '*ignores you*'
   secondLines:
-  - Oh brodi tis is bad on my fam yo!
-  - What if I never see my meese again...
+  - '*looks at you*'
+  - hi.
   thirdLines:
-  - Eh I guess it do be my time eh?
-  - Aboot toime eh.
+  - '*goes to sleep*'
+  fourthLines:
+  - '*still sleeping*'
+  fifthLines:
+  - "oh\u2026hi\u2026don\u2019t mind me I\u2019m just playing Silent Hill."
+  sixthLines:
+  - Zzzzzz.
 --- !u!143 &197746798
 CharacterController:
   m_ObjectHideFlags: 0
@@ -733,7 +776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.96
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.z
@@ -768,9 +811,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1204175419}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 256407357}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1838358378}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactText
       value: 
@@ -784,6 +839,68 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+--- !u!1 &256407357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256407358}
+  - component: {fileID: 256407359}
+  m_Layer: 5
+  m_Name: dialogueUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &256407358
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256407357}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.320314, y: 2.320314, z: 2.320314}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1736519464}
+  - {fileID: 1204175418}
+  - {fileID: 1838358377}
+  - {fileID: 550047008}
+  m_Father: {fileID: 2004430928}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -287, y: -698}
+  m_SizeDelta: {x: 332.5633, y: 113.9181}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &256407359
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256407357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1785fd29dd99cb42ae0182d41f1ef5c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &270773293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -802,7 +919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.96
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.z
@@ -837,9 +954,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1204175419}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 256407357}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1838358378}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactText
       value: 
@@ -1240,13 +1369,285 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Taylor
+  charName: Taylor
   firstLines:
-  - Hey broski, welcome to class, how u doin (with heavy LA accent)
+  - "Hey broski, man bro I\u2019m barely on time. These goddamn elevators ya know."
+  - Anyway, welcome to class, how u doin? (with heavy LA accent)
   secondLines:
-  - Oh my gowd this is LITERALLY not happening right nyow-ah
+  - "DAMN son its warm as fuck outside (it\u2019s 15 degrees Fahrenheight)."
+  - "It\u2019s gonna melt off my cunty Makeup (with heavy LA accent)"
   thirdLines:
-  - Dude. we gotta get outta here NEOW!
+  - "Have you tried the Chocolate Babka slices bro, they\u2019re awesomeeeee."
+  - I eat them every time I come here. (with heavy LA accent).
+  fourthLines:
+  - "Ya know I know I am not gonna win this game. And that\u2019s okay."
+  - I am willing to accept that. I am content with myself not winning this game.
+  - "But someone better turn on Marvel Rivals after this shit cause THEN imma beat
+    everyone\u2019s ass (with heavy LA Accent)."
+  fifthLines:
+  - "I don\u2019t wanna but I gotta do my homework so ya know I\u2019m locking in."
+  - '*plays the Living Tombstone*'
+  - "What. It\u2019s my focusing music (with heavy LA Accent)."
+  sixthLines:
+  - Shhhhh go awayyyyyy me sleeping now zzzzzzzzzzzzzzzzzzzzzzzzzzz (with Heavy LA
+    accent).
+--- !u!1 &550047007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 550047008}
+  - component: {fileID: 550047011}
+  - component: {fileID: 550047010}
+  - component: {fileID: 550047009}
+  m_Layer: 5
+  m_Name: continue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &550047008
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550047007}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 560997093}
+  m_Father: {fileID: 256407358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 400, y: -119}
+  m_SizeDelta: {x: 134.5892, y: 53.1199}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &550047009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550047007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 550047010}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &550047010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550047007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d07912958583c24469197de6e4cfe8db, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &550047011
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550047007}
+  m_CullTransparentMesh: 1
+--- !u!1 &560997092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560997093}
+  - component: {fileID: 560997095}
+  - component: {fileID: 560997094}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &560997093
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560997092}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 550047008}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -6.3304}
+  m_SizeDelta: {x: 0, y: -22.5694}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &560997094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560997092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Continue...
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: c448975fff0d0da43b327a420d73c17d, type: 2}
+  m_sharedMaterial: {fileID: 5725730264943598543, guid: c448975fff0d0da43b327a420d73c17d, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 14.6
+  m_fontSizeBase: 14.6
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &560997095
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560997092}
+  m_CullTransparentMesh: 1
 --- !u!1 &689920757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,14 +1772,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Kelise
+  charName: Kelise
   firstLines:
-  - I LOVEEE HATSUNE MIKU.
-  - MIKU MIKU MIKUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU!
+  - "I\u2019m Kelise. I LOVE HATSUNE MIKU."
+  - "MIKU. MIKU. MIKU. MIKU. MIKUUUUU\u2026\u2026MIKUUUUUUUUUU"
   secondLines:
-  - Dude I cant die, I gotta go to Miku Expo later.
+  - "I am making a game about Hatsune Miku! It\u2019s gonna be so awesomesauce."
   thirdLines:
-  - 'Oh **** oh ****oh **** oh **** oh **** oh **** OH ****! '
+  - MIKU MIKU MIKUUUUU MIKU MIKU MIKUUUUU I LOVE MIKUUUUUUUU.
+  - "I\u2019m preparing for the Miku Expo if you couldn\u2019t tell."
+  fourthLines:
+  - I am trying to convince Leah to give in and become her best gay self.
+  - She is resisting heavily.
+  fifthLines:
+  - '*making music with Umi*'
+  - This sounds like shit. This is so good.
+  sixthLines:
+  - It's 3 AM which means it's peak MIKUUUUUU TIMEEEEE!!!
+  - '*gets into Hatsune Miku cosplay*'
+  - I'm all ready for the Miku expo!!!!
+  - In 4 months......
 --- !u!1001 &767972122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1397,7 +1810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.96
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1432,9 +1845,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1204175419}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 256407357}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1838358378}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactText
       value: 
@@ -1656,7 +2081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.96
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1691,9 +2116,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1204175419}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 256407357}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1838358378}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactText
       value: 
@@ -1939,22 +2376,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Cathy
+  charName: Cathy
   firstLines:
-  - OMG hi ym name is Cathy I love Yaoi. I draw Yaoi. I live for Yaoi. Here is a
-    poem I wrote about Yaoi. Here it goes. Ahem.
-  - "Oh yaoi\u2014 you beautiful, dramatic, slow-burn catastrophe, you genre of almost,
+  - "Heyo I\u2019m Kathy. I love Yaoi."
+  - I am currently drafting a love poem to Yaoi to show it how much I love and appreciate
+    it. Anyway here goes. Ahem.
+  - "Oh Yaoi. you beautiful, dramatic, slow-burn catastrophe, you genre of almost,
     of glances held a fraction too long and hands that hover like they\u2019re afraid
-    of changing the universe. "
-  - 'I love you in the way one loves rain when it ruins plans but makes everything
-    feel cinematic. I love you in the way of unread messages, three dots blinking,
-    tension stretched so tight it hums. '
+    of changing the universe."
   - 'I love you in the way one loves rain when it ruins plans but makes everything
     feel cinematic. I love you in the way of unread messages, three dots blinking,
     tension stretched so tight it hums. '
   - "I love you for the men\u2014 grown men, tragically grown, with emotional repression
     stacked like unpaid bills, who stare at each other like if I say this out loud
     I might die, but if I don\u2019t I definitely will. "
+  - Awesome so far right? Yeah I know, I'm pretty talented. Anyway, I'm gonna keep
+    working on it. I got a lot more to say about this important topic.
+  secondLines:
+  - OMG you're back! I made more progress on my poem.....Wanna hear?
+  - No? Well you're gonna hear it anyway!!! Ahem Ahem...
   - "I love you for the tropes, oh, the tropes\u2014 the rivals who argue as foreplay
     (but metaphorically, relax), the coworkers who pretend professionalism while
     their souls are actively holding hands, the childhood friends who swear they\u2019re
@@ -1966,48 +2406,58 @@ MonoBehaviour:
   - "I love you for the almost-touch: fingers brushing in a crowded room, a jacket
     placed gently over tired shoulders, a lingering hand on a wrist that says \u201CI
     noticed you. I always notice you.\u201D "
+  - I am mtruly so proud of this. Gotta keep working though, it hasn't reached it's
+    full potential...yet.
+  thirdLines:
+  - This food will never make me feel as happy as Yaoi does...
+  - Oh since you brought up Yaoi!!!! I think I finished it!!! Let me show you hehehehe.
+    Ahem Ahem Ahem...
   - "I love you for conversations at 2 a.m., under fluorescent lights or soft moon
     glow, where one character finally cracks and the other doesn\u2019t fix him\u2014
     just stays. Just stays. "
   - "I love you for the dramatic misunderstandings that could be solved in one sentence
     but instead fuel ten chapters of exquisite suffering. Do I scream? Yes. Do I
     eat it up like it\u2019s a five-course meal? Also yes. "
-  - That's it so far. But it's a work in progress. Come back later and I will have
-    it fully finished tehehehee....
-  secondLines:
-  - YOU'RE BACK! What? Robots trying to kill us? Meh whatever, what's more important
-    is you hear more about my poem right now. Ahem Ahem.
-  - 'Yaoi...I love you for the way love is never casual. It is important. It is life-altering.
+  - Hmmmm. Something's not right. It needs more. Come back later, trust, it's gonna
+    be even greater.
+  fourthLines:
+  - OH THERE YOU ARE. WELCOME TO MY YAOI CORNER OF DARKNESS.MWAHAHAHAH I FOUND YOU.
+    YOU CAN'T AVOID ME FOREVER!!!
+  - YOU MUST HEAR THE LATEST DRAFT OF MY POEM. IT'S REALLY GOOD I SWEAR. BEST THING
+    I HAVE EVER WRITTEN IN MY LIFE.
+  - NU UHHH YOU AREN'T GOING ANYWHERE UNTIL I READ THIS TO YOU. AHEM AHEM AHEM AHEMMMM.
+  - 'I love you for the way love is never casual. It is important. It is life-altering.
     It is treated like a secret treasure chest buried under trauma, pride, and poorly
     timed interruptions. '
   - "I love you for the rain scenes, the hospital scenes, the \u201Csay his name
     like it\u2019s a prayer\u201D scenes. I love you for the moment one of them realizes\u2014
     oh no. this isn\u2019t admiration. this is the thing that ruins me. "
-  - "I love you for the rain scenes, the hospital scenes, the \u201Csay his name
-    like it\u2019s a prayer\u201D scenes. I love you for the moment one of them realizes\u2014
-    oh no. this isn\u2019t admiration. this is the thing that ruins me. "
+  - Awesome RIGHT?!!! No? I am going to pretend you said it is the most amazing piece
+    of literature in the world. Right. Right. Anyway I am going to keep drafting.
+    It isn't perfect yet...
+  fifthLines:
+  - HEYYYYY HEYYY! Listen I came up with these new BALLERRRR stanzas you gotta listen.
+    AHEM AHEM AHEM.
   - "I love you for the soft endings, the earned confessions, the kiss that doesn\u2019t
     need description because the entire story has been the buildup. "
   - "And yes\u2014 I love you obnoxiously. I love you unapologetically. I love you
     in the way only someone who has whispered \u201CJUST COMMUNICATE\u201D at a screen
     while smiling like an idiot can. "
-  - Yaoi...damn that's how far I got. Awesome right. What's that? You have to save
-    us from robots. UGHH tsk tsk tsk.
-  - Whatever go finish that I guess. I have to find the perfect ending to this poem
-    anyway.
-  - But once you come back, trust me, you will be BLOWN out of the water. It'll be
-    that good. Trust.
-  thirdLines:
-  - YOU'RE BACK. YESSS. HERE HERE I GOT IT. THE PERFECT ENDING. LISTEN!
+  - GOOD RIGHT?!??! Might I even go as far to say, AMAZING, TRANSCENDANT, and BEAUTIFUL...
+  - Anyway, I am struggling to come up with the last few lines. They simply must
+    be PERFECT, I need to give Yaoi the love and honor it deserves...
+  sixthLines:
+  - HAHHHAHHA AAAAHAHAHAHAHHAH. I FINALLY FINISHED IT. I DID IT. I MADE ART.
+  - I HAVE NOT SLEPT IN WEEKS BECAUSE OF THIS, BUT IT IS ALL WORTH IT NOW! I FINALLY
+    FINISHED IT. THE PERFECT ENDING!!!! HERE IT GOES.
+  - AHEM AHEM AHEM AHEM AHEM AHEM.
   - 'Yaoi, you are poetry written in longing, romance stretched thin and glowing,
     two men choosing each other again and again in a world that made it hard. '
   - "And I will read you, over and over, dramatic sigh by dramatic sigh, until the
     slow burn finally ignites\u2014 and somehow, impossibly, it was worth every second. "
-  - In short, Thank you Yaoi. For everything. I love gay men.
-  - So what did you think???!?!?! Amazing right. My best work honestly.
-  - What? Saving us? Oh right. Sure Sure go do that. My Yaoi comic deadline is soon
-    I needa get on that.
-  - It was awesome though right...
+  - '*starts emotionally crying*'
+  - I am so happy I can die in peace. Oh Yaoi, how I love you.
+  - '*passes out*'
 --- !u!1 &1159988663
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,17 +2608,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Christian
+  charName: Christian
   firstLines:
-  - Ayo friend, sorry I didn't bring my maple syrup today, eh, my meese ate in me
-    back yard...
-  - Eh, tomorrow i'll bring my bag and maple leaf eh. Niagara falls, niagara falls...
+  - 'Ayo friend, sorry I didn''t bring my maple syrup today, eh, my meese ate in
+    me back yard, eh. '
+  - "Tomorrow I'll bring my bag and maple leaf eh. Niagara falls, niagara falls\u2026"
   secondLines:
-  - Oh brodi tis is bad on my fam yo!
-  - What if I never see my meese again...
+  - "Oh brodi. Tis is bad bro. I can\u2019t figure out what happened to me game bro. "
+  - "The Github Repo ain\u2019t helpin much eh. Whatever I guess."
+  - "Niagara falls, Niagara falls\u2026"
   thirdLines:
-  - Eh I guess it do be my time eh?
-  - Aboot toime eh.
+  - Damn bro bro that was a productive class for sure. I fixed the bug yay yay yay.
+  - Now I gotta put all me stuff back in me bag eh and then do somethin.
+  - "Idk. *shrugs* Niagara Falls, Niagara Falls\u2026"
+  fourthLines:
+  - OOOHHH SPOT DODGE SPOT DODGE SPOT DODGEEEEEE.
+  - "HAHAHHA I THINK I AM SO FUNNY AHHAHAHAHAH. Niagara Falls, Niagara Falls\u2026"
+  fifthLines:
+  - Everyone left but I guess I still be gamin eh?
+  - "Niagara falls, Niagara falls\u2026"
+  sixthLines:
+  - "Zzzzzz. Maple Syrup. ZZZZzzzzz. Yee old Canada. Zzzzz. I miss my meese. Zzzzzzz
+    Niagara falls, Niagara falls\u2026."
 --- !u!4 &1172733426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
@@ -2333,6 +2794,142 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
   m_PrefabInstance: {fileID: 126154226}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1204175417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1204175418}
+  - component: {fileID: 1204175420}
+  - component: {fileID: 1204175419}
+  m_Layer: 5
+  m_Name: CharName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1204175418
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204175417}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 256407358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -60.770496, y: 27.8257}
+  m_SizeDelta: {x: 236.3533, y: 24.5819}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1204175419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204175417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Character Name
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: c448975fff0d0da43b327a420d73c17d, type: 2}
+  m_sharedMaterial: {fileID: 5725730264943598543, guid: c448975fff0d0da43b327a420d73c17d, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 17.8
+  m_fontSizeBase: 17.8
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 4096
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1204175420
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204175417}
+  m_CullTransparentMesh: 1
 --- !u!1 &1480296263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,16 +3054,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Christine
+  charName: Christine
   firstLines:
   - Anyway that's why Tracer is the best to main.
-  - Oh right. I'm teaching.
-  - Good Morning. Make sure to Interact with everyone and then take a seat to start
-    class!
+  - Oh right. I'm teaching. Good Morning.
+  - We are starting class once everyone is ready.
+  - Spoiler alert. They never will be.
   secondLines:
-  - "NO!...My loans\u2026What if I still have to pay them."
+  - Hey guys. This is the lesson for the day and shit.
+  - "Learn it I guess. Don\u2019t use Chat GPT or I\u2019ll end you."
+  - Anyway Imma be over here playing Overwatch if you need help just gimme a holler.
   thirdLines:
-  - '*texts mom love u*'
+  - "I\u2019m going into a meeting now. *sigh* I wish I could play overwatch."
+  fourthLines:
+  - "SHHHHH I\u2019M LOCKED IN TO OVERWATCH OMG I\u2019M WINNING!!!!! "
+  - YAAZZZZZZZZZ.
+  fifthLines:
+  - "And in conclusion, that\u2019s why Tracer is the best character in overwatch
+    to main."
+  - "Anyway though, It\u2019s hour 6 of Overwatch and I am still fully enjoying myself."
+  sixthLines:
+  - "Zzzzzz\u2026I miss my doogies\u2026 "
+  - "ZZzzz Student loans. Omg how am I gonna pay my student loans\u2026"
+  - ZZZZzzzzzzZZZZzzzz *snore*
 --- !u!1 &1608562832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2512,6 +3122,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
   m_PrefabInstance: {fileID: 223153188}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1736519463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736519464}
+  - component: {fileID: 1736519466}
+  - component: {fileID: 1736519465}
+  m_Layer: 5
+  m_Name: dialogueBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1736519464
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736519463}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.54891074, y: 0.54891074, z: 0.54891074}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 256407358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 138, y: -44}
+  m_SizeDelta: {x: 1270.7236, y: 389.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1736519465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736519463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 06f5e99c985425941a8fc44e473c0598, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1736519466
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736519463}
+  m_CullTransparentMesh: 1
 --- !u!1 &1801946691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,23 +3321,166 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84246a412e120284ebb2f40012066458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Leah
+  charName: Leah
   firstLines:
-  - OMG OILYYYYY OILY IS MY FAVORITE ADJECTIVE HOW MANY TIMES CAN I SAY OILY IN ONE
-    BREATH LETS TRY
+  - "OMG HI I\u2019m LEAH. FUN FACT ABOUT ME I LOVE OILY MEN."
+  - OILY IS MY FAVORITE ADJECTIVE HOW MANY TIMES CAN I SAY OILY IN ONE BREATH LETS
+    TRY.
   - OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY oILy OILy
     oILy OILy oILY oiLY OILy oil- oily- *GASP*
-  - Yeah that's it for now fam.
+  - Yeah that's it for now...What are you still doing here?
   secondLines:
-  - OMG I CAN'T BELIEVE THIS IS HAPPENING WHAT DO I DO.
-  - IF I DIE THEN I WON'T SEE MY DOG AGAIN. OR OILY MEN. OMG I HADN'T EVEN THOUGHT
-    OF THE OILY MEN. WHAT WILL THEY DO WITHOUT ME?!??
-  - NOOOOOOOOOOOOO! OILY MEN!!!!!!!!!!!!
+  - "Ya know what my game is about\u2026guess\u2026.OILY MEN. hAHAHA. IM SO EXCITED."
+  - OILY OILY OILY OILY OILYYYY.
   thirdLines:
-  - I can't believe I'm dying here....
-  - Tell the oily men, I love them, I cherish them, I value them, and they were the
-    reason I breathed every day...
-  - FML I guess.
+  - I wanna iced latte with a double shot of espresso and a side of oily men please.
+  fourthLines:
+  - Ya know I love Kelise and she is such a baddie but unfortunately I am straight.
+    Yeah.
+  - OILY MENNNNNNNNN MMMMM.
+  fifthLines:
+  - "I came cause Michelle came. And I\u2019m also hungry. That too. "
+  - "Hoping they have my side of Oily Men this time\u2026"
+  sixthLines:
+  - "Heyo. I\u2019m playing Hour 1500+ on Royale High right now."
+  - I gotta get my prizes for the day ya know. I am cosplaying as an OILY MALE PRINCE
+    UHHHHH.
+--- !u!1 &1838358376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1838358377}
+  - component: {fileID: 1838358379}
+  - component: {fileID: 1838358378}
+  m_Layer: 5
+  m_Name: dialogueText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1838358377
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838358376}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 256407358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 138.53, y: -56.82571}
+  m_SizeDelta: {x: 634.95, y: 129.1719}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1838358378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838358376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Dialogue Here...
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: c448975fff0d0da43b327a420d73c17d, type: 2}
+  m_sharedMaterial: {fileID: 5725730264943598543, guid: c448975fff0d0da43b327a420d73c17d, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 15.46
+  m_fontSizeBase: 15.46
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1838358379
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838358376}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1846335874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2671,7 +3499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.96
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2706,9 +3534,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1204175419}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 256407357}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1838358378}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactText
       value: 
@@ -2750,7 +3590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.96
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2785,9 +3625,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1204175419}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 256407357}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1838358378}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactText
       value: 
@@ -3058,6 +3910,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2085525368}
+  - {fileID: 256407358}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3158,6 +4011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+  gameLevel: 0
 --- !u!65 &2143596721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3265,7 +4119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.96
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6579664238951215015, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3300,9 +4154,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1204175419}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 256407357}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1838358378}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: interactText
       value: 

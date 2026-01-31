@@ -3,10 +3,15 @@ using UnityEngine;
 
 public class unitInfo : MonoBehaviour
 {
-    public string name;
+    public string charName;
     public List<string> firstLines;
     public List<string> secondLines;
     public List<string> thirdLines;
+    public List<string> fourthLines;
+    public List<string> fifthLines;
+    public List<string> sixthLines;
+
+    //public Queue<string> level1;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
