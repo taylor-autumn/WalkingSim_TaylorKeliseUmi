@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class interactCircle : MonoBehaviour
@@ -9,16 +10,17 @@ public class interactCircle : MonoBehaviour
 
     [Header("Other Shit")]
     public gameManager managerRef;
-    private bool canPush = false;
-    unitInfo charUnit;
+    public bool canPush = false;
+    unitInfo currentCharUnit;
+    dialogueScript diaRef;
     Animator diaAnimator;
-    
 
     [Header("UI Texts")]
-    public TMP_Text dialogueText;
     public TMP_Text nameText;
     public TMP_Text interactText;
-    
+
+    //event bool
+    private bool dialogueFinished = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -28,66 +30,83 @@ public class interactCircle : MonoBehaviour
     }
     void Start()
     {
-
+        diaRef.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (canPush && Input.GetKeyDown(KeyCode.E))
+        if (canPush && 
+            Input.GetKeyDown(KeyCode.E) && 
+            managerRef.currentInteract==this)
         {
-            managerRef.state = gameState.interactMode;
-            print("In interacting");
+            print("I activated");
             canPush = false;
-            Animator interactAnimator = interactButton.GetComponentInChildren<Animator>();
-            interactAnimator.SetTrigger("push");
-            activateLines();
+            managerRef.state = gameState.interactMode;
+            engageNPC();
         }
-        if (Input.GetKeyDown(KeyCode.Q) && managerRef.state == gameState.interactMode)
+        if (Input.GetKeyDown(KeyCode.Q) && 
+            managerRef.state == gameState.interactMode && 
+            managerRef.currentInteract==this &&
+            dialogueFinished)
         {
             canPush = true;
-            managerRef.state = gameState.normalMode;
-            diaAnimator.SetTrigger("off");
+            exitDialogue();
             //make it so the interaction has to be finished to close it, make Q text visible at end and make it actually able to do it
         }
+
     }
 
     public void getInformation()
     {
-        charUnit = gameObject.GetComponentInParent<unitInfo>();
         diaAnimator = dialogueUI.GetComponentInChildren<Animator>();
+        GameObject gameManagerGO = GameObject.Find("gameManager");
+        diaRef = gameManagerGO.GetComponent<dialogueScript>();
+
     }
 
-    public void activateLines()
+    public void engageNPC()
     {
+        dialogueFinished = false;
+        diaRef.onDialogueFinished += handleDialogueFinished;
+
+        Animator interactAnimator = interactButton.GetComponentInChildren<Animator>();
+        interactAnimator.SetTrigger("push");
+        diaRef.enabled = true;
         diaAnimator.SetTrigger("on");
-        //make the box come in animation
-        nameText.text = charUnit.charName;
-        dialogueText.text = charUnit.charName + " is speaking...";
+        nameText.text = currentCharUnit.charName;
 
         if (managerRef.gameLevel == timeOfDay.beforeClass)
         {
-            print(charUnit.charName + " before class lines go");
+            print(currentCharUnit.charName + " before class lines go");
+            diaRef.StartDialogue(currentCharUnit.firstLines);
+
         }
         else if (managerRef.gameLevel == timeOfDay.inClass)
         {
-            print(charUnit.charName + " class lines go");
+            print(currentCharUnit.charName + " class lines go");
+            diaRef.StartDialogue(currentCharUnit.secondLines);
+
         }
         else if (managerRef.gameLevel == timeOfDay.lunch)
         {
-            print(charUnit.charName + " lunch lines go");
+            print(currentCharUnit.charName + " lunch lines go");
+            diaRef.StartDialogue(currentCharUnit.thirdLines);
         }
         else if (managerRef.gameLevel == timeOfDay.gamesClub)
         {
-            print(charUnit.charName + " games club lines go");
+            print(currentCharUnit.charName + " games club lines go");
+            diaRef.StartDialogue(currentCharUnit.fourthLines);
         }
         else if (managerRef.gameLevel == timeOfDay.evening)
         {
-            print(charUnit.charName + " evening lines go");
+            print(currentCharUnit.charName + " evening lines go");
+            diaRef.StartDialogue(currentCharUnit.fifthLines);
         }
         else if (managerRef.gameLevel == timeOfDay.night)
         {
-            print(charUnit.charName + " night lines go");
+            print(currentCharUnit.charName + " night lines go");
+            diaRef.StartDialogue(currentCharUnit.sixthLines);
         }
 
     }
@@ -96,24 +115,37 @@ public class interactCircle : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            currentCharUnit = gameObject.GetComponentInParent<unitInfo>();
+            managerRef.currentInteract=this;
             interactButton.SetActive(true);
             canPush = true;
-            interactText.text = "Interact (E) with " + charUnit.charName;
-
+            interactText.text = "Interact (E) with " + currentCharUnit.charName;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            interactButton.SetActive(false);
-            canPush = false;
-            print("Bye " + charUnit.name + "!");
-        }
+        managerRef.currentInteract = null;
+        interactButton.SetActive(false);
+        canPush = false;
+        print("Bye " + currentCharUnit.name + "!");
     }
 
+    void handleDialogueFinished()
+    {
+        dialogueFinished = true;
+        //exit text font visible
+    }
 
+    public void exitDialogue()
+    {
+        if (managerRef.currentInteract != this) return;
 
+        diaRef.onDialogueFinished -= handleDialogueFinished;
 
+        managerRef.state = gameState.normalMode;
+        diaAnimator.SetTrigger("off");
+        diaRef.endDialogue();
+        //diaRef.enabled = false;
+    }
 }

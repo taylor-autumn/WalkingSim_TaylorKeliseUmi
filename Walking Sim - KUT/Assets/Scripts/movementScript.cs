@@ -22,7 +22,13 @@ public class movementScript : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
 
+    unitInfo charUnit;
+    interactCircle colliderRef;
+
     public bool debugs;
+
+    //me shit
+    public static bool canPeesh = false;
 
 
     void Start()
@@ -89,5 +95,23 @@ public class movementScript : MonoBehaviour
         }
 
     }
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    charUnit = other.GetComponentInParent<unitInfo>();
+    //    colliderRef = other.GetComponent<interactCircle>();
+    //    print("In" + charUnit.charName + "'s area");
+    //    canPeesh = true;
+    //}
+
+    //private void OnTriggerExit(Collider other)
+    //{
+
+    //    print("leaving" + charUnit.charName + "'s area");
+    //    canPeesh = false;
+    //}
+
+
+
 
 }

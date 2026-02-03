@@ -483,7 +483,7 @@ MonoBehaviour:
   - FINALLYYYY class is over and I can play games omg I love games.
   fourthLines:
   - "Shh shhhhh I can\u2019t be bothered right now."
-  - "I\u2019m locked in to How I met your Mother and I cannot have any distractions."
+  - "I\u2019m locked in to How I Met Your Mother and I cannot have any distractions."
   fifthLines:
   - What? I was craving a late night snack okay.
   - No judgment welcomed here.
@@ -2378,7 +2378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Cathy
   firstLines:
-  - "Heyo I\u2019m Kathy. I love Yaoi."
+  - "Heyo I\u2019m Cathy. I love Yaoi."
   - I am currently drafting a love poem to Yaoi to show it how much I love and appreciate
     it. Anyway here goes. Ahem.
   - "Oh Yaoi. you beautiful, dramatic, slow-burn catastrophe, you genre of almost,
@@ -2406,7 +2406,7 @@ MonoBehaviour:
   - "I love you for the almost-touch: fingers brushing in a crowded room, a jacket
     placed gently over tired shoulders, a lingering hand on a wrist that says \u201CI
     noticed you. I always notice you.\u201D "
-  - I am mtruly so proud of this. Gotta keep working though, it hasn't reached it's
+  - I am truly so proud of this. Gotta keep working though, it hasn't reached it's
     full potential...yet.
   thirdLines:
   - This food will never make me feel as happy as Yaoi does...
@@ -2421,7 +2421,7 @@ MonoBehaviour:
   - Hmmmm. Something's not right. It needs more. Come back later, trust, it's gonna
     be even greater.
   fourthLines:
-  - OH THERE YOU ARE. WELCOME TO MY YAOI CORNER OF DARKNESS.MWAHAHAHAH I FOUND YOU.
+  - OH THERE YOU ARE. WELCOME TO MY YAOI CORNER OF DARKNESS. MWAHAHAHAH I FOUND YOU.
     YOU CAN'T AVOID ME FOREVER!!!
   - YOU MUST HEAR THE LATEST DRAFT OF MY POEM. IT'S REALLY GOOD I SWEAR. BEST THING
     I HAVE EVER WRITTEN IN MY LIFE.
@@ -3325,9 +3325,12 @@ MonoBehaviour:
   firstLines:
   - "OMG HI I\u2019m LEAH. FUN FACT ABOUT ME I LOVE OILY MEN."
   - OILY IS MY FAVORITE ADJECTIVE HOW MANY TIMES CAN I SAY OILY IN ONE BREATH LETS
-    TRY.
+    TRY. MY RECORD IS 94 TIMES. IMMA BEAT IT WATCH.
   - OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY oILy OILy
-    oILy OILy oILY oiLY OILy oil- oily- *GASP*
+    oILy OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY
+    OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY
+    OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY OILY oILy OILy oILy oILy OILy
+    oILy  oILy OILy oILy OILy oILY oiLY OILy oil- oily- *GASP*
   - Yeah that's it for now...What are you still doing here?
   secondLines:
   - "Ya know what my game is about\u2026guess\u2026.OILY MEN. hAHAHA. IM SO EXCITED."
@@ -3991,6 +3994,7 @@ GameObject:
   - component: {fileID: 2143596722}
   - component: {fileID: 2143596721}
   - component: {fileID: 2143596720}
+  - component: {fileID: 2143596725}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -4012,6 +4016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   gameLevel: 0
+  currentInteract: {fileID: 0}
 --- !u!65 &2143596721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4101,6 +4106,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2143596725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143596719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a238833d4cf272d4cbec9b9fb1ead12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 1838358378}
+  textSpeed: 0.03
+  listOfChoice: []
 --- !u!1001 &7549749147762269899
 PrefabInstance:
   m_ObjectHideFlags: 0

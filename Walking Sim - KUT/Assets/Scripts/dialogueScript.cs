@@ -1,65 +1,97 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using System;
 
 public class dialogueScript : MonoBehaviour
 {
-    public TextMeshProUGUI textComponent;
-    public string[] lines;
+    public TMP_Text dialogueText;
     public float textSpeed;
     private int index;
-    public unitInfo charUnitRef;
+    public List<string> listOfChoice;
+    gameManager managerRef;
+
+    public event Action onDialogueFinished;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        textComponent.text = string.Empty;
-        StartDialougue();
+        //listOfChoice
+
+        dialogueText.text = string.Empty; //leah
+        managerRef = gameObject.GetComponent<gameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!enabled || listOfChoice==null) return;
+
         if (Input.GetMouseButtonDown(0))
         {
-            if (textComponent.text == lines[index])
+            if (dialogueText.text == listOfChoice[index])
             {
                 NextLine();
             }
             else
             {
                 StopAllCoroutines();
-                textComponent.text = lines[index];
+                dialogueText.text = listOfChoice[index];
             }
         }
     }
-    void StartDialougue()
+
+    public void StartDialogue(List<string> newLines)
     {
+        StopAllCoroutines();
+
+        listOfChoice = newLines;
         index = 0;
+
+        dialogueText.text = string.Empty;
+
+        if (listOfChoice == null || listOfChoice.Count == 0)
+        {
+            Debug.LogWarning("Dialogue started with empty list!");
+            return;
+        }
+
         StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
     {
-        foreach (char c in lines[index].ToCharArray())
+        foreach (char c in listOfChoice[index].ToCharArray())
         {
-            textComponent.text += c;
+            dialogueText.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
     }
     void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < listOfChoice.Count-1)
         {
             index++;
-            textComponent.text = string.Empty;
+            dialogueText.text = string.Empty;
             StartCoroutine(TypeLine());
         }
-        else
+        if (index == listOfChoice.Count - 1)
         {
-            //end stuff
-            SceneManager.LoadScene("HOLY SHIT ITS HAPPENING");
+            print("dialogue end");
+            //event
+            onDialogueFinished?.Invoke();
         }
     }
+
+    public void endDialogue()
+    {
+        StopAllCoroutines();
+        listOfChoice = null;
+        index = 0;
+        dialogueText.text = string.Empty;
+        enabled = false;
+    }
+
+
 }
