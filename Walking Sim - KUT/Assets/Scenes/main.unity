@@ -1427,7 +1427,7 @@ GameObject:
   - component: {fileID: 550047010}
   - component: {fileID: 550047009}
   m_Layer: 5
-  m_Name: continue
+  m_Name: closeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1592,7 +1592,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue...
+  m_text: Close (Q)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c448975fff0d0da43b327a420d73c17d, type: 2}
   m_sharedMaterial: {fileID: 5725730264943598543, guid: c448975fff0d0da43b327a420d73c17d, type: 2}
@@ -2637,11 +2637,11 @@ MonoBehaviour:
     me back yard, eh. '
   - "Tomorrow I'll bring my bag and maple leaf eh. Niagara falls, niagara falls\u2026"
   secondLines:
-  - "Oh brodi. Tis is bad bro. I can\u2019t figure out what happened to me game bro. "
-  - "The Github Repo ain\u2019t helpin much eh. Whatever I guess."
+  - Oh brodi. I don't even know what I'm doing right now to be so honest.
+  - All I really got going for me right now is that I'm canadian I guess *shrugs*
   - "Niagara falls, Niagara falls\u2026"
   thirdLines:
-  - Damn bro bro that was a productive class for sure. I fixed the bug yay yay yay.
+  - Damn bro bro that was a productive class for sure. I did nothing.
   - Now I gotta put all me stuff back in me bag eh and then do somethin.
   - "Idk. *shrugs* Niagara Falls, Niagara Falls\u2026"
   fourthLines:
@@ -3079,7 +3079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Christine
   firstLines:
-  - Anyway that's why Tracer is the best to main.
+  - Anyway that's why the Malcolm X Bot is the best to main.
   - Oh right. I'm teaching. Good Morning.
   - We are starting class once everyone is ready.
   - Spoiler alert. They never will be.
@@ -3093,8 +3093,16 @@ MonoBehaviour:
   - "SHHHHH I\u2019M LOCKED IN TO OVERWATCH OMG I\u2019M WINNING!!!!! "
   - YAAZZZZZZZZZ.
   fifthLines:
-  - "And in conclusion, that\u2019s why Tracer is the best character in overwatch
-    to main."
+  - "And in conclusion, that\u2019s why Palworld is the absolute dog shit poo poo
+    character in the game."
+  - They were gassing that shit up like HighGuard I think Palworld should be eliminated,
+    although it eliminated itself. It has nothing going for it. WHO IS PLAYING PALWORD
+    IN 2026? NO ONE. ZERO PEOPLE. ZILCH.
+  - ANYONE who gassed up Palworld should be humilaited just like Geoff Keighly was
+    for hyping up High Guard.
+  - Ummm. yeah I ran outta gas. My one keyboard line ain't working no more. I reached
+    my character limit.
+  - Follow me for more hot takes on X the everything app.
   - "Anyway though, It\u2019s hour 6 of Overwatch and I am still fully enjoying myself."
   sixthLines:
   - "Zzzzzz\u2026I miss my doogies\u2026 "
