@@ -2,13 +2,15 @@ using UnityEngine;
 
 public enum gameState { normalMode, interactMode}
 public enum timeOfDay { beforeClass,inClass,lunch,gamesClub,evening,night }
+
 public class gameManager : MonoBehaviour
 {
     public gameState state;
     public timeOfDay gameLevel;
     private GameObject michelle;
     public interactCircle currentInteract;
-    
+    public Animator theSun;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,6 +36,12 @@ public class gameManager : MonoBehaviour
         else
         {
             michelle.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            theSun.SetTrigger("change");
+            print("the sun is a deadly laser");
         }
 
     }
