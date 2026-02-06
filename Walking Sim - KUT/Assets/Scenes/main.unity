@@ -328,6 +328,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143596720}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: closeButton
+      value: 
+      objectReference: {fileID: 550047007}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1838358378}
@@ -408,6 +412,10 @@ PrefabInstance:
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: closeButton
+      value: 
+      objectReference: {fileID: 550047007}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: dialogueText
       value: 
@@ -823,6 +831,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143596720}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: closeButton
+      value: 
+      objectReference: {fileID: 550047007}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1838358378}
@@ -965,6 +977,10 @@ PrefabInstance:
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: closeButton
+      value: 
+      objectReference: {fileID: 550047007}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1880,6 +1896,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143596720}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: closeButton
+      value: 
+      objectReference: {fileID: 550047007}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1838358378}
@@ -2150,6 +2170,10 @@ PrefabInstance:
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: closeButton
+      value: 
+      objectReference: {fileID: 550047007}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: dialogueText
       value: 
@@ -3580,6 +3604,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143596720}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: closeButton
+      value: 
+      objectReference: {fileID: 550047007}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1838358378}
@@ -3670,6 +3698,10 @@ PrefabInstance:
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: closeButton
+      value: 
+      objectReference: {fileID: 550047007}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: dialogueText
       value: 
@@ -4217,6 +4249,10 @@ PrefabInstance:
       propertyPath: managerRef
       value: 
       objectReference: {fileID: 2143596720}
+    - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
+      propertyPath: closeButton
+      value: 
+      objectReference: {fileID: 550047007}
     - target: {fileID: 8067558684886703144, guid: 7be2c6b7ce8b7d445956ba9a5f454700, type: 3}
       propertyPath: dialogueText
       value: 

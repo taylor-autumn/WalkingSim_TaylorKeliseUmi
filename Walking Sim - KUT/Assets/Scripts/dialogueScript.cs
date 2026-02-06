@@ -9,6 +9,7 @@ public class dialogueScript : MonoBehaviour
     public TMP_Text dialogueText;
     public float textSpeed;
     private int index;
+    bool isTyping = false;
     public List<string> listOfChoice;
     gameManager managerRef;
 
@@ -30,14 +31,15 @@ public class dialogueScript : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (dialogueText.text == listOfChoice[index])
-            {
-                NextLine();
-            }
-            else
+            if (isTyping)
             {
                 StopAllCoroutines();
                 dialogueText.text = listOfChoice[index];
+                isTyping = false;
+            }
+            else
+            {
+                NextLine();
             }
         }
     }
@@ -62,10 +64,19 @@ public class dialogueScript : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        isTyping = true;
+        yield return null;
+
         foreach (char c in listOfChoice[index].ToCharArray())
         {
             dialogueText.text += c;
             yield return new WaitForSeconds(textSpeed);
+        }
+        isTyping = false;
+        // kills itself if it's the only line in the list
+        if (listOfChoice.Count == 1)
+        {
+            onDialogueFinished?.Invoke();
         }
     }
     void NextLine()

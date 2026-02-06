@@ -7,6 +7,7 @@ public class interactCircle : MonoBehaviour
     [Header("UI GO's")]
     public GameObject interactButton;
     public GameObject dialogueUI;
+    public GameObject closeButton;
 
     [Header("Other Shit")]
     public gameManager managerRef;
@@ -31,6 +32,7 @@ public class interactCircle : MonoBehaviour
     void Start()
     {
         diaRef.enabled = false;
+        closeButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -134,6 +136,7 @@ public class interactCircle : MonoBehaviour
     void handleDialogueFinished()
     {
         dialogueFinished = true;
+        closeButton.SetActive(true);
         //exit text font visible
     }
 
@@ -146,6 +149,6 @@ public class interactCircle : MonoBehaviour
         managerRef.state = gameState.normalMode;
         diaAnimator.SetTrigger("off");
         diaRef.endDialogue();
-        //diaRef.enabled = false;
+        closeButton.SetActive(false);
     }
 }
