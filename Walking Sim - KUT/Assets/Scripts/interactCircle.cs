@@ -7,6 +7,7 @@ public class interactCircle : MonoBehaviour
     [Header("UI GO's")]
     public GameObject interactButton;
     public GameObject dialogueUI;
+    public GameObject closeButton;
 
     [Header("Other Shit")]
     public gameManager managerRef;
@@ -14,6 +15,7 @@ public class interactCircle : MonoBehaviour
     unitInfo currentCharUnit;
     dialogueScript diaRef;
     Animator diaAnimator;
+    public bool firstInteraction = true;
 
     [Header("UI Texts")]
     public TMP_Text nameText;
@@ -31,6 +33,7 @@ public class interactCircle : MonoBehaviour
     void Start()
     {
         diaRef.enabled = false;
+        closeButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,7 +43,6 @@ public class interactCircle : MonoBehaviour
             Input.GetKeyDown(KeyCode.E) && 
             managerRef.currentInteract==this)
         {
-            print("I activated");
             canPush = false;
             managerRef.state = gameState.interactMode;
             engageNPC();
@@ -75,6 +77,13 @@ public class interactCircle : MonoBehaviour
         diaRef.enabled = true;
         diaAnimator.SetTrigger("on");
         nameText.text = currentCharUnit.charName;
+        diaRef.startTalking(currentCharUnit.idleImage, currentCharUnit.talkingImage);
+        
+        if (currentCharUnit.firstInteraction)
+        {
+            currentCharUnit.firstInteraction = false;
+            managerRef.trackInteract += 1;
+        }
 
         if (managerRef.gameLevel == timeOfDay.beforeClass)
         {
@@ -128,12 +137,12 @@ public class interactCircle : MonoBehaviour
         managerRef.currentInteract = null;
         interactButton.SetActive(false);
         canPush = false;
-        print("Bye " + currentCharUnit.name + "!");
     }
 
     void handleDialogueFinished()
     {
         dialogueFinished = true;
+        closeButton.SetActive(true);
         //exit text font visible
     }
 
@@ -146,6 +155,6 @@ public class interactCircle : MonoBehaviour
         managerRef.state = gameState.normalMode;
         diaAnimator.SetTrigger("off");
         diaRef.endDialogue();
-        //diaRef.enabled = false;
+        closeButton.SetActive(false);
     }
 }
