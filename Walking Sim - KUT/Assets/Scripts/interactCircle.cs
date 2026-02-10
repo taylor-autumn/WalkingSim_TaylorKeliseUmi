@@ -15,6 +15,7 @@ public class interactCircle : MonoBehaviour
     unitInfo currentCharUnit;
     dialogueScript diaRef;
     Animator diaAnimator;
+    public bool firstInteraction = true;
 
     [Header("UI Texts")]
     public TMP_Text nameText;
@@ -42,7 +43,6 @@ public class interactCircle : MonoBehaviour
             Input.GetKeyDown(KeyCode.E) && 
             managerRef.currentInteract==this)
         {
-            print("I activated");
             canPush = false;
             managerRef.state = gameState.interactMode;
             engageNPC();
@@ -77,6 +77,13 @@ public class interactCircle : MonoBehaviour
         diaRef.enabled = true;
         diaAnimator.SetTrigger("on");
         nameText.text = currentCharUnit.charName;
+        diaRef.startTalking(currentCharUnit.idleImage, currentCharUnit.talkingImage);
+        
+        if (currentCharUnit.firstInteraction)
+        {
+            currentCharUnit.firstInteraction = false;
+            managerRef.trackInteract += 1;
+        }
 
         if (managerRef.gameLevel == timeOfDay.beforeClass)
         {
@@ -130,7 +137,6 @@ public class interactCircle : MonoBehaviour
         managerRef.currentInteract = null;
         interactButton.SetActive(false);
         canPush = false;
-        print("Bye " + currentCharUnit.name + "!");
     }
 
     void handleDialogueFinished()
