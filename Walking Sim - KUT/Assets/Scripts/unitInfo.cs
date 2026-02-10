@@ -17,17 +17,13 @@ public class unitInfo : MonoBehaviour
     [TextArea(2, 2)]
     public List<string> sixthLines;
 
+    [Header("Talking Images")]
+    public Sprite idleImage;
+    public Sprite talkingImage;
+
+    [Header("Interaction")]
+    public bool firstInteraction = true;
+
     //public Queue<string> level1; tutorial stuff
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
