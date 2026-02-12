@@ -5,6 +5,7 @@ using UnityEngine;
 public class movementScript : MonoBehaviour
 {
     public gameManager managerRef;
+    public GameObject respawnPoint;
 
     [Header("Player Movement")]
     public float moveSpeed = 5.0f;
@@ -98,20 +99,12 @@ public class movementScript : MonoBehaviour
 
     //private void OnTriggerEnter(Collider other)
     //{
-    //    charUnit = other.GetComponentInParent<unitInfo>();
-    //    colliderRef = other.GetComponent<interactCircle>();
-    //    print("In" + charUnit.charName + "'s area");
-    //    canPeesh = true;
+    //    if (other.gameObject.CompareTag("toCafe"))
+    //    {
+    //        transform.position = respawnPoint.transform.position;
+    //        print("teleporter activated");
+    //    }
     //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-
-    //    print("leaving" + charUnit.charName + "'s area");
-    //    canPeesh = false;
-    //}
-
-
 
 
 }
