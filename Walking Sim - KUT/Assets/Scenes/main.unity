@@ -3747,12 +3747,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530335348}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.75, y: -0.73, z: -20.36}
-  m_LocalScale: {x: 5.1225395, y: 0.1649045, z: 5.1225395}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.8927318, z: 0}
+  m_LocalScale: {x: 1.3005, y: 1.3004999, z: 1.3005}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1768584091}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608562832
 GameObject:
@@ -4156,7 +4156,8 @@ Transform:
   m_LocalPosition: {x: 2.75, y: -0.49, z: -20.36}
   m_LocalScale: {x: 3.9389, y: 0.12680085, z: 3.9389}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1530335352}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1768584092
@@ -4933,7 +4934,6 @@ GameObject:
   - component: {fileID: 1983880221}
   - component: {fileID: 1983880220}
   - component: {fileID: 1983880219}
-  - component: {fileID: 1983880225}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5078,33 +5078,6 @@ Transform:
   - {fileID: 330585546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 91.387, z: 0}
---- !u!54 &1983880225
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983880218}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!1 &2004430924
 GameObject:
   m_ObjectHideFlags: 0
@@ -5597,4 +5570,3 @@ SceneRoots:
   - {fileID: 2143596724}
   - {fileID: 1167126705}
   - {fileID: 1768584091}
-  - {fileID: 1530335352}
