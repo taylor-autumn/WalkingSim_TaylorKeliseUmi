@@ -95,16 +95,25 @@ public class movementScript : MonoBehaviour
 
         }
 
-    }
+        if (Input.GetKey(KeyCode.J))
+        {
+            GameObject elevatorFloor = GameObject.Find("elevatorFloor");
+            Animator elevAnim = elevatorFloor.GetComponent<Animator>();
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("toCafe"))
-    //    {
-    //        transform.position = respawnPoint.transform.position;
-    //        print("teleporter activated");
-    //    }
-    //}
+            elevAnim.SetTrigger("move");
+            
+            if (elevatorFloor = null)
+            {
+                print("couldn't find the elevator floor");
+            }
+            if (elevAnim = null)
+            {
+                print("couldn't find the elevator animator");
+            }
+
+        }
+
+    }
 
 
 }
