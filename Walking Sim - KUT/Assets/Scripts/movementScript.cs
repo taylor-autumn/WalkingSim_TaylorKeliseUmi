@@ -97,7 +97,7 @@ public class movementScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.J))
         {
-            GameObject elevatorFloor = GameObject.Find("elevatorFloor");
+            GameObject elevatorFloor = GameObject.Find("elevatorForm");
             Animator elevAnim = elevatorFloor.GetComponent<Animator>();
 
             elevAnim.SetTrigger("move");
