@@ -12,7 +12,11 @@ public class movementScript : MonoBehaviour
     public float jumpForce = 8.0f;
     public float gravity = 20.0f;
 
+    [Header("Bools and Elevator shit")]
     private bool canMove = true;
+    public bool inElev = false;
+    public bool notMoving = true;
+    public elevator elevRef;
 
     [Header("Mouse Look")]
     private Camera cam;
@@ -95,24 +99,54 @@ public class movementScript : MonoBehaviour
 
         }
 
-        if (Input.GetKey(KeyCode.J))
+        if (!inElev && notMoving && Input.GetKeyDown(KeyCode.J))
         {
-            GameObject elevatorFloor = GameObject.Find("elevatorForm");
-            Animator elevAnim = elevatorFloor.GetComponent<Animator>();
+            print("opening doors, this would be like pushing the button");
 
-            elevAnim.SetTrigger("move");
-            
-            if (elevatorFloor = null)
-            {
-                print("couldn't find the elevator floor");
-            }
-            if (elevAnim = null)
-            {
-                print("couldn't find the elevator animator");
-            }
+            GameObject elevator = GameObject.Find("elevatorGO");
+            Animator elevAnim = elevator.GetComponent<Animator>();
+            elevAnim.SetTrigger("open");
 
         }
 
+        if (inElev && notMoving && Input.GetKeyDown(KeyCode.K))
+        {
+            print("closing and moving elevator");
+            GameObject elevator = GameObject.Find("elevatorGO");
+            Animator elevAnim = elevator.GetComponent<Animator>();
+
+            elevAnim.SetTrigger("close");
+            Invoke(nameof(moveFloors), 3f);
+
+            //setting the moving false to signify we are moving now
+            notMoving = false;
+
+        }
+
+    }
+
+    public void moveFloors()
+    {
+        GameObject elevFloor = GameObject.Find("elevatorFloor");
+        Animator moveElevAnim = elevFloor.GetComponent<Animator>();
+        moveElevAnim.SetTrigger("move");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("elevator"))
+        {
+            inElev = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("elevator"))
+        {
+            inElev = false;
+            notMoving = true;
+        }
     }
 
 
