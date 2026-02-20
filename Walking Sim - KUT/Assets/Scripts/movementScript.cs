@@ -15,8 +15,10 @@ public class movementScript : MonoBehaviour
     [Header("Bools and Elevator shit")]
     private bool canMove = true;
     public bool inElev = false;
-    public bool notMoving = true;
+    //public bool notMoving = true;
     public elevator elevRef;
+    public GameObject elevatorGO;
+    Animator elevAnim;
 
     [Header("Mouse Look")]
     private Camera cam;
@@ -41,6 +43,8 @@ public class movementScript : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         cam = Camera.main;
         Cursor.lockState = CursorLockMode.Locked;
+        elevatorGO = GameObject.Find("elevatorGO");
+        elevAnim = elevatorGO.GetComponent<Animator>();
         //Cursor.visible = false;
     }
 
@@ -99,37 +103,20 @@ public class movementScript : MonoBehaviour
 
         }
 
-        if (!inElev && notMoving && Input.GetKeyDown(KeyCode.J))
+        if (!inElev && Input.GetKeyDown(KeyCode.K))
         {
-            print("opening doors, this would be like pushing the button");
-
-            GameObject elevator = GameObject.Find("elevatorGO");
-            Animator elevAnim = elevator.GetComponent<Animator>();
-            elevAnim.SetTrigger("open");
+            print("opening doors/pushing button");
+            elevAnim.SetTrigger("pushOpen");
 
         }
 
-        if (inElev && notMoving && Input.GetKeyDown(KeyCode.K))
+        if (inElev && Input.GetKeyDown(KeyCode.J))
         {
             print("closing and moving elevator");
-            GameObject elevator = GameObject.Find("elevatorGO");
-            Animator elevAnim = elevator.GetComponent<Animator>();
-
-            elevAnim.SetTrigger("close");
-            Invoke(nameof(moveFloors), 3f);
-
-            //setting the moving false to signify we are moving now
-            notMoving = false;
+            elevAnim.SetTrigger("move");
 
         }
 
-    }
-
-    public void moveFloors()
-    {
-        GameObject elevFloor = GameObject.Find("elevatorFloor");
-        Animator moveElevAnim = elevFloor.GetComponent<Animator>();
-        moveElevAnim.SetTrigger("move");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -137,6 +124,9 @@ public class movementScript : MonoBehaviour
         if (other.CompareTag("elevator"))
         {
             inElev = true;
+            elevAnim.ResetTrigger("move");
+            elevAnim.ResetTrigger("pushOpen");
+            print("entering elevator");
         }
     }
 
@@ -145,9 +135,13 @@ public class movementScript : MonoBehaviour
         if (other.CompareTag("elevator"))
         {
             inElev = false;
-            notMoving = true;
+            elevAnim.ResetTrigger("move");
+            elevAnim.ResetTrigger("pushOpen");
+            elevAnim.SetTrigger("leaveElev");
+            print("leaving elevator");
         }
-    }
 
+
+    }
 
 }
