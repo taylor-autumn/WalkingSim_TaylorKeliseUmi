@@ -29,7 +29,6 @@ public class dialogueScript : MonoBehaviour
 
         dialogueText.text = string.Empty; //leah
         managerRef = gameObject.GetComponent<gameManager>();
-        spritePlaceholder.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -55,6 +54,7 @@ public class dialogueScript : MonoBehaviour
 
     public void StartDialogue(List<string> newLines)
     {
+        spritePlaceholder.gameObject.SetActive(true);
         StopAllCoroutines();
 
         listOfChoice = newLines;
