@@ -18185,8 +18185,8 @@ MonoBehaviour:
   sixthLines:
   - Shhhhh go awayyyyyy me sleeping now zzzzzzzzzzzzzzzzzzzzzzzzzzz (with Heavy LA
     accent).
-  idleImage: {fileID: 21300000, guid: 58d67249f425b0844bb990bf70c9f446, type: 3}
-  talkingImage: {fileID: 21300000, guid: b01e19f76503b574eab966e0d58e8e5b, type: 3}
+  idleImage: {fileID: 21300000, guid: c644bec43e46a204e85b1ab12f7c377b, type: 3}
+  talkingImage: {fileID: 21300000, guid: 0c1c20eaaf8f9224daed7e330c74bfce, type: 3}
   firstInteraction: 1
 --- !u!1 &538524755
 GameObject:
