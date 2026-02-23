@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.TextCore.Text;
 
 public enum gameState { normalMode, interactMode}
 public enum timeOfDay { beforeClass,inClass,lunch,gamesClub,evening,night }
@@ -31,11 +33,23 @@ public class gameManager : MonoBehaviour
         michelle = GameObject.Find("Michelle");
         characterParents = GameObject.Find("characters");
         pushButton.SetActive(false);
+
+        changeCharPositions(characterParents);
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        //cheat next level
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
+        {
+            hackNextLevel();
+            print("hacking next level");
+        }
+
+
+
         if (Input.GetKeyDown(KeyCode.P) && state == gameState.normalMode)
         {
             nextLevel();
@@ -64,16 +78,13 @@ public class gameManager : MonoBehaviour
         //always changes the text based off the mode/gameLevel
         changeText();
 
-        if (state == gameState.normalMode)
+        if (checkStatus(characterParents) && state == gameState.normalMode)
         {
-            if (checkStatus(characterParents))
-            {
-                pushButton.SetActive(true);
-            }
-            else
-            {
-                pushButton.SetActive(false);
-            }
+            pushButton.SetActive(true);
+        }
+        else
+        {
+            pushButton.SetActive(false);
         }
 
     }
@@ -82,14 +93,21 @@ public class gameManager : MonoBehaviour
     {
         if (checkStatus(characterParents))
         {
+            //changes the time of day
             int levelCount = System.Enum.GetValues(typeof(timeOfDay)).Length;
             int nextLevel = ((int)gameLevel + 1) % levelCount;
             gameLevel = (timeOfDay)nextLevel;
+
+            //changes the sun
             theSun.SetTrigger("change"); //changes the sun
             print("On Level " + gameLevel);
+
+            //resets the characters interact so you have to interact with them again
             resetCharacters(characterParents);
-            //pushButton.SetActive(false);
             trackInteract = 0;
+
+            //moves the characters
+            addPositionIndex(characterParents);
         }
         else
         {
@@ -118,6 +136,7 @@ public class gameManager : MonoBehaviour
         else if (gameLevel == timeOfDay.inClass)
         {
             modeText.text = "Current Time: 9:30 AM";
+            //taylor.transform.position = respawn.transform.position;
         }
         else if (gameLevel == timeOfDay.lunch)
         {
@@ -162,6 +181,59 @@ public class gameManager : MonoBehaviour
             unitInfo charUnit = character.GetComponent<unitInfo>();
             charUnit.firstInteraction = true;
         }
+    }
+
+    public void changeCharPositions(GameObject parentCharacters)
+    {
+        foreach (Transform character in parentCharacters.transform)
+        {
+            unitInfo charUnit = character.GetComponent<unitInfo>();
+            if (charUnit == null) continue;
+
+            List<GameObject> positionList = charUnit.charPositions;
+
+            if (positionList.Count == 0) continue;
+
+            charUnit.transform.position =
+                positionList[charUnit.charPositionIndex].transform.position;
+            charUnit.transform.rotation =
+                positionList[charUnit.charPositionIndex].transform.rotation;
+        }
+    }
+
+    public void addPositionIndex(GameObject parentCharacters)
+    {
+        foreach (Transform character in parentCharacters.transform)
+        {
+            unitInfo charUnit = character.GetComponent<unitInfo>();
+            if (charUnit == null) continue;
+
+            if (charUnit.charPositions.Count == 0) continue;
+
+            charUnit.charPositionIndex =
+                (charUnit.charPositionIndex + 1) % charUnit.charPositions.Count;
+        }
+
+        changeCharPositions(parentCharacters);
+    }
+
+    public void hackNextLevel()
+    {
+        //changes the time of day
+        int levelCount = System.Enum.GetValues(typeof(timeOfDay)).Length;
+        int nextLevel = ((int)gameLevel + 1) % levelCount;
+        gameLevel = (timeOfDay)nextLevel;
+
+        //changes the sun
+        theSun.SetTrigger("change"); //changes the sun
+        print("On Level " + gameLevel);
+
+        //resets the characters interact so you have to interact with them again
+        resetCharacters(characterParents);
+        trackInteract = 0;
+
+        //moves the characters
+        addPositionIndex(characterParents);
     }
 
 }
