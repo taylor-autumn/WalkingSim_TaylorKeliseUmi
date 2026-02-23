@@ -8,10 +8,4 @@ public class newMenu : MonoBehaviour
         SceneManager.LoadScene("main");
     }
 
-    public void quitGame()
-    {
-        Application.Quit();
-        print("quitting");
-    }
-
 }

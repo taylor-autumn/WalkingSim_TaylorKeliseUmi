@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class unitInfo : MonoBehaviour
 {
+
+    [Header("Name")]
     public string charName;
+
+    [Header("Lines")]
     [TextArea(2,2)]
     public List<string> firstLines;
     [TextArea(2, 2)]
@@ -23,6 +27,10 @@ public class unitInfo : MonoBehaviour
 
     [Header("Interaction")]
     public bool firstInteraction = true;
+
+    [Header("Positions")]
+    public List<GameObject> charPositions;
+    public int charPositionIndex = 0;
 
     //public Queue<string> level1; tutorial stuff
 
