@@ -51,6 +51,16 @@ public class movementScript : MonoBehaviour
     void Update()
     {
         //this also means you cant move the camera, decide later if we want it that way or not
+        if (managerRef.state == gameState.normalMode || managerRef.state == gameState.interactMode)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            print("cursor unlocked");
+            Cursor.lockState = CursorLockMode.None;
+        }
+
 
         if (managerRef.state == gameState.normalMode)
         {
@@ -142,6 +152,11 @@ public class movementScript : MonoBehaviour
         }
 
 
+    }
+
+    public void resetMoveDirection()
+    {
+        moveDirection = Vector3.zero;
     }
 
 }
