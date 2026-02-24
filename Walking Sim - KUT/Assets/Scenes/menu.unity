@@ -1299,8 +1299,10 @@ MonoBehaviour:
 
     Change Elevator Floor: J
 
-    Proceed Text:
-    Left Mouse Click'
+    Open/Close
+    Game Menu: M
+
+    Proceed Text: Left Mouse Click'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c448975fff0d0da43b327a420d73c17d, type: 2}
   m_sharedMaterial: {fileID: 5725730264943598543, guid: c448975fff0d0da43b327a420d73c17d, type: 2}

@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
-public enum gameState { normalMode, interactMode}
+public enum gameState { normalMode, interactMode, menuMode}
 public enum timeOfDay { beforeClass,inClass,lunch,gamesClub,evening,night }
 
 public class gameManager : MonoBehaviour
@@ -25,6 +24,13 @@ public class gameManager : MonoBehaviour
     public TMP_Text maxInteractNumber;
     public GameObject pushButton;
 
+    [Header("Transition stuff")]
+    public GameObject blinkGO;
+    public Animator blinkAnim;
+
+    [Header("Menu Stuff")]
+    public GameObject mainMenu;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,7 +39,7 @@ public class gameManager : MonoBehaviour
         michelle = GameObject.Find("Michelle");
         characterParents = GameObject.Find("characters");
         pushButton.SetActive(false);
-
+        mainMenu.SetActive(false);
         changeCharPositions(characterParents);
     }
 
@@ -41,8 +47,26 @@ public class gameManager : MonoBehaviour
     void Update()
     {
 
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (state == gameState.normalMode)
+            {
+                mainMenu.SetActive(true);
+                state = gameState.menuMode;
+                print("menu mode");
+            }
+            else if (state == gameState.menuMode)
+            {
+                mainMenu.SetActive(false);
+                state = gameState.normalMode;
+                print("back to normal mode");
+            }
+        }
+
         //cheat next level
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKey(KeyCode.LeftShift) &&
+            Input.GetKeyDown(KeyCode.P) &&
+            state==gameState.normalMode)
         {
             hackNextLevel();
             print("hacking next level");
@@ -108,6 +132,9 @@ public class gameManager : MonoBehaviour
 
             //moves the characters
             addPositionIndex(characterParents);
+
+            //reset the character
+            StartCoroutine(levelTransition());
         }
         else
         {
@@ -234,6 +261,48 @@ public class gameManager : MonoBehaviour
 
         //moves the characters
         addPositionIndex(characterParents);
+
+        //reset the character
+        StartCoroutine(levelTransition());
+        
     }
+
+    public IEnumerator levelTransition()
+    {
+        print("called coRoutine");
+        blinkGO.SetActive(true);
+        blinkAnim.SetTrigger("blink");
+
+        yield return new WaitForSeconds(0.5f);
+        GameObject thePlayer = GameObject.Find("Player");
+        GameObject respawnPoint = GameObject.Find("respawn");
+
+        if (thePlayer != null && respawnPoint != null)
+        {
+            print("moving character");
+
+            CharacterController controller = thePlayer.GetComponent<CharacterController>();
+
+            if (controller != null)
+            {
+                controller.enabled = false;
+                thePlayer.transform.position = respawnPoint.transform.position;
+                controller.enabled = true;
+            }
+
+            movementScript moveScript = thePlayer.GetComponent<movementScript>();
+            if (moveScript != null)
+            {
+                moveScript.resetMoveDirection();
+            }
+        }
+
+        yield return new WaitForSeconds(1.5f);
+        blinkAnim.ResetTrigger("blink");
+        blinkGO.SetActive(false);
+
+
+    }
+
 
 }

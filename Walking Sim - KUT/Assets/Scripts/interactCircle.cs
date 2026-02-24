@@ -41,7 +41,8 @@ public class interactCircle : MonoBehaviour
     {
         if (canPush && 
             Input.GetKeyDown(KeyCode.E) && 
-            managerRef.currentInteract==this)
+            managerRef.currentInteract==this && 
+            managerRef.state==gameState.normalMode)
         {
             canPush = false;
             managerRef.state = gameState.interactMode;
