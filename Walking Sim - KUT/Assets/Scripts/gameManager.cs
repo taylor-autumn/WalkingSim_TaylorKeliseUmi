@@ -14,6 +14,7 @@ public class gameManager : MonoBehaviour
     public Animator theSun;
     GameObject characterParents;
     public int trackInteract = 0;
+    movementScript moveRef;
 
     [Header("objects and text")]
     private GameObject michelle;
@@ -41,25 +42,25 @@ public class gameManager : MonoBehaviour
         pushButton.SetActive(false);
         mainMenu.SetActive(false);
         changeCharPositions(characterParents);
+        GameObject thePlayer = GameObject.Find("Player");
+        moveRef = thePlayer.GetComponent<movementScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) && !moveRef.inElev)
         {
             if (state == gameState.normalMode)
             {
                 mainMenu.SetActive(true);
                 state = gameState.menuMode;
-                print("menu mode");
             }
             else if (state == gameState.menuMode)
             {
                 mainMenu.SetActive(false);
                 state = gameState.normalMode;
-                print("back to normal mode");
             }
         }
 
@@ -135,6 +136,13 @@ public class gameManager : MonoBehaviour
 
             //reset the character
             StartCoroutine(levelTransition());
+
+            //animation reset elevator
+            GameObject elevatorGO = GameObject.Find("elevatorGO");
+            Animator elevAnim = elevatorGO.GetComponent<Animator>();
+            elevAnim.Rebind();
+            elevAnim.Update(0f);
+
         }
         else
         {
@@ -264,12 +272,16 @@ public class gameManager : MonoBehaviour
 
         //reset the character
         StartCoroutine(levelTransition());
-        
+
+        //animation reset elevator
+        GameObject elevatorGO = GameObject.Find("elevatorGO");
+        Animator elevAnim = elevatorGO.GetComponent<Animator>();
+        elevAnim.Rebind();
+        elevAnim.Update(0f);
     }
 
     public IEnumerator levelTransition()
     {
-        print("called coRoutine");
         blinkGO.SetActive(true);
         blinkAnim.SetTrigger("blink");
 
@@ -279,7 +291,6 @@ public class gameManager : MonoBehaviour
 
         if (thePlayer != null && respawnPoint != null)
         {
-            print("moving character");
 
             CharacterController controller = thePlayer.GetComponent<CharacterController>();
 

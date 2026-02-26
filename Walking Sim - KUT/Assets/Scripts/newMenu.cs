@@ -8,4 +8,9 @@ public class newMenu : MonoBehaviour
         SceneManager.LoadScene("main");
     }
 
+    public void backToMenu()
+    {
+        SceneManager.LoadScene("menu");
+    }
+
 }
