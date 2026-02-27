@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - toCafe
-  - elevator
-  - games
   layers:
   - Default
   - TransparentFX

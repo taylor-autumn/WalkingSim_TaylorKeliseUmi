@@ -18,7 +18,6 @@ public class gameManager : MonoBehaviour
 
     [Header("objects and text")]
     private GameObject michelle;
-    public GameObject tvScreen;
     public GameObject modeBox;
     public GameObject nextLevelButton;
     public TMP_Text modeText;
@@ -33,16 +32,6 @@ public class gameManager : MonoBehaviour
     [Header("Menu Stuff")]
     public GameObject mainMenu;
 
-    [Header("Audio")]
-    public AudioSource dayMusic;
-    public AudioSource noonMusic;
-    public AudioSource lateMusic;
-    public AudioSource currentMusic;
-    public AudioSource vineBoom;
-    public AudioSource elevatorMusic;
-    public AudioSource smashMusic;
-    public GameObject smashMusicArea;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -55,11 +44,7 @@ public class gameManager : MonoBehaviour
         changeCharPositions(characterParents);
         GameObject thePlayer = GameObject.Find("Player");
         moveRef = thePlayer.GetComponent<movementScript>();
-        currentMusic = dayMusic;
-        currentMusic.Play();
-        smashMusicArea.SetActive(false);
-        tvScreen.SetActive(false);
-}
+    }
 
     // Update is called once per frame
     void Update()
@@ -82,7 +67,7 @@ public class gameManager : MonoBehaviour
         //cheat next level
         if (Input.GetKey(KeyCode.LeftShift) &&
             Input.GetKeyDown(KeyCode.P) &&
-            state==gameState.normalMode && !moveRef.inElev)
+            state==gameState.normalMode)
         {
             hackNextLevel();
             print("hacking next level");
@@ -90,8 +75,7 @@ public class gameManager : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.P) && state == gameState.normalMode
-            && !moveRef.inElev)
+        if (Input.GetKeyDown(KeyCode.P) && state == gameState.normalMode)
         {
             nextLevel();
         }
@@ -114,17 +98,6 @@ public class gameManager : MonoBehaviour
         else
         {
             michelle.SetActive(true);
-        }
-
-        if (gameLevel == timeOfDay.gamesClub || gameLevel == timeOfDay.evening || gameLevel == timeOfDay.night)
-        {
-            tvScreen.SetActive(true);
-            smashMusicArea.SetActive(true);
-        }
-        else
-        {
-            tvScreen.SetActive(false);
-            smashMusicArea.SetActive(false);
         }
 
         //always changes the text based off the mode/gameLevel
@@ -170,9 +143,6 @@ public class gameManager : MonoBehaviour
             elevAnim.Rebind();
             elevAnim.Update(0f);
 
-            //music managing
-            
-
         }
         else
         {
@@ -201,6 +171,7 @@ public class gameManager : MonoBehaviour
         else if (gameLevel == timeOfDay.inClass)
         {
             modeText.text = "Current Time: 9:30 AM";
+            //taylor.transform.position = respawn.transform.position;
         }
         else if (gameLevel == timeOfDay.lunch)
         {
@@ -311,12 +282,8 @@ public class gameManager : MonoBehaviour
 
     public IEnumerator levelTransition()
     {
-
-        currentMusic.Pause();
-
         blinkGO.SetActive(true);
         blinkAnim.SetTrigger("blink");
-        vineBoom.Play();
 
         yield return new WaitForSeconds(0.5f);
         GameObject thePlayer = GameObject.Find("Player");
@@ -345,35 +312,8 @@ public class gameManager : MonoBehaviour
         blinkAnim.ResetTrigger("blink");
         blinkGO.SetActive(false);
 
-        manageMusic();
 
     }
 
-    public void manageMusic()
-    {
-        AudioSource newMusic = null;
-
-        if (gameLevel == timeOfDay.beforeClass || gameLevel == timeOfDay.inClass)
-            newMusic = dayMusic;
-        else if (gameLevel == timeOfDay.lunch || gameLevel == timeOfDay.gamesClub)
-            newMusic = noonMusic;
-        else if (gameLevel == timeOfDay.evening || gameLevel == timeOfDay.night)
-            newMusic = lateMusic;
-
-        if (currentMusic == newMusic)
-        {
-            currentMusic.Play();
-            return;
-        }
-
-        if (currentMusic != null)
-            currentMusic.Stop();
-
-        currentMusic = newMusic;
-
-        if (currentMusic != null)
-            currentMusic.Play();
-
-    }
 
 }
