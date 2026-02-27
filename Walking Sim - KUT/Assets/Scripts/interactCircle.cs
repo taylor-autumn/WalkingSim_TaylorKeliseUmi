@@ -82,7 +82,7 @@ public class interactCircle : MonoBehaviour
         nameText.text = currentCharUnit.charName;
         diaRef.startTalking(currentCharUnit.idleImage, currentCharUnit.talkingImage);
         
-        if (currentCharUnit.firstInteraction)
+        if (currentCharUnit.firstInteraction && currentCharUnit.charName!="Emily")
         {
             currentCharUnit.firstInteraction = false;
             managerRef.trackInteract += 1;

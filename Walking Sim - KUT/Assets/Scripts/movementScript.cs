@@ -16,7 +16,6 @@ public class movementScript : MonoBehaviour
     private bool canMove = true;
     public bool inElev = false;
     //public bool notMoving = true;
-    public elevator elevRef;
     public GameObject elevatorGO;
     Animator elevAnim;
 
@@ -31,11 +30,9 @@ public class movementScript : MonoBehaviour
 
     unitInfo charUnit;
     interactCircle colliderRef;
+    bool musicStopped = false;
 
     public bool debugs;
-
-    //me shit
-    public static bool canPeesh = false;
 
 
     void Start()
@@ -57,7 +54,6 @@ public class movementScript : MonoBehaviour
         }
         else
         {
-            print("cursor unlocked");
             Cursor.lockState = CursorLockMode.None;
         }
 
@@ -115,18 +111,52 @@ public class movementScript : MonoBehaviour
 
         if (!inElev && Input.GetKeyDown(KeyCode.K))
         {
-            print("opening doors/pushing button");
             elevAnim.SetTrigger("pushOpen");
 
         }
 
         if (inElev && Input.GetKeyDown(KeyCode.J))
         {
-            print("closing and moving elevator");
             elevAnim.SetTrigger("move");
-
+            playElevMusic();
         }
 
+        
+
+    }
+
+    public void playElevMusic()
+    {
+        musicStopped = true;
+        managerRef.currentMusic.Pause();
+        managerRef.elevatorMusic.Play();
+    }
+
+    public void resumeNormalMusic()
+    {
+        if (musicStopped)
+        {
+            managerRef.currentMusic.Play();
+            managerRef.elevatorMusic.Stop();
+            musicStopped = false;
+        }
+    }
+
+    public void playSmashMusic()
+    {
+        musicStopped = true;
+        managerRef.currentMusic.Pause();
+        managerRef.smashMusic.Play();
+    }
+
+    public void stopSmashMusic()
+    {
+        if (musicStopped)
+        {
+            managerRef.currentMusic.Play();
+            managerRef.smashMusic.Stop();
+            musicStopped = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -137,6 +167,11 @@ public class movementScript : MonoBehaviour
             elevAnim.ResetTrigger("move");
             elevAnim.ResetTrigger("pushOpen");
             print("entering elevator");
+        }
+        if (other.CompareTag("games"))
+        {
+            print("in game area");
+            playSmashMusic();
         }
     }
 
@@ -149,6 +184,12 @@ public class movementScript : MonoBehaviour
             elevAnim.ResetTrigger("pushOpen");
             elevAnim.SetTrigger("leaveElev");
             print("leaving elevator");
+            resumeNormalMusic();
+        }
+        if (other.CompareTag("games"))
+        {
+            print("leaving game area");
+            stopSmashMusic();
         }
 
 
