@@ -18,6 +18,7 @@ public class gameManager : MonoBehaviour
 
     [Header("objects and text")]
     private GameObject michelle;
+    public GameObject tvScreen;
     public GameObject modeBox;
     public GameObject nextLevelButton;
     public TMP_Text modeText;
@@ -39,6 +40,8 @@ public class gameManager : MonoBehaviour
     public AudioSource currentMusic;
     public AudioSource vineBoom;
     public AudioSource elevatorMusic;
+    public AudioSource smashMusic;
+    public GameObject smashMusicArea;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,7 +57,9 @@ public class gameManager : MonoBehaviour
         moveRef = thePlayer.GetComponent<movementScript>();
         currentMusic = dayMusic;
         currentMusic.Play();
-    }
+        smashMusicArea.SetActive(false);
+        tvScreen.SetActive(false);
+}
 
     // Update is called once per frame
     void Update()
@@ -109,6 +114,17 @@ public class gameManager : MonoBehaviour
         else
         {
             michelle.SetActive(true);
+        }
+
+        if (gameLevel == timeOfDay.gamesClub || gameLevel == timeOfDay.evening || gameLevel == timeOfDay.night)
+        {
+            tvScreen.SetActive(true);
+            smashMusicArea.SetActive(true);
+        }
+        else
+        {
+            tvScreen.SetActive(false);
+            smashMusicArea.SetActive(false);
         }
 
         //always changes the text based off the mode/gameLevel
