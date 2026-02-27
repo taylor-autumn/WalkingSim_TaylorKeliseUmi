@@ -141,6 +141,24 @@ public class movementScript : MonoBehaviour
             musicStopped = false;
         }
     }
+
+    public void playSmashMusic()
+    {
+        musicStopped = true;
+        managerRef.currentMusic.Pause();
+        managerRef.smashMusic.Play();
+    }
+
+    public void stopSmashMusic()
+    {
+        if (musicStopped)
+        {
+            managerRef.currentMusic.Play();
+            managerRef.smashMusic.Stop();
+            musicStopped = false;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("elevator"))
@@ -149,6 +167,11 @@ public class movementScript : MonoBehaviour
             elevAnim.ResetTrigger("move");
             elevAnim.ResetTrigger("pushOpen");
             print("entering elevator");
+        }
+        if (other.CompareTag("games"))
+        {
+            print("in game area");
+            playSmashMusic();
         }
     }
 
@@ -162,6 +185,11 @@ public class movementScript : MonoBehaviour
             elevAnim.SetTrigger("leaveElev");
             print("leaving elevator");
             resumeNormalMusic();
+        }
+        if (other.CompareTag("games"))
+        {
+            print("leaving game area");
+            stopSmashMusic();
         }
 
 
